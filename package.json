@@ -1,0 +1,10 @@
+{
+  "name": "isit300-ts-error-lab",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "5.6.3"
+  }
+}

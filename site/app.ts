@@ -491,7 +491,7 @@ function catchFromCard(card: HTMLElement): void {
 // ERROR 2 — Look up number line. pokemon.id is a number.
 // formatNumber, near the top of this file, already turns a number into "#001".
 function renderSpotlightNumber(pokemon: PokemonMeasurement): void {
-  spotlightNumber.textContent = "#" + formatNumber(pokemon.id).padStart(3, "0");
+  spotlightNumber.textContent = formatNumber(pokemon.id);
 }
 
 // ERROR 3 — Sort menu. The menu's two values are "id" and "name".
@@ -522,7 +522,7 @@ function formatStat(stat: PokemonStat): string {
 function summarize(pokemon: PokemonDetail): PokemonSummary {
   return {
     id: pokemon.id,
-    name: formatName(pokemon.types[0].type.name),
+    name: formatName(pokemon.name),
     primaryType: pokemon.types[0].type.name
   };
 }

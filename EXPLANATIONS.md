@@ -12,13 +12,13 @@ Example (not one of the ten):
 
 **Message:** Argument of type 'string' is not assignable to parameter of type 'number'.
 
-**Explanation:** The ID was passed as a string, but the "rememberCaught()" function requires a number. So putting "rawID" in "Number()" converts it the string to a number to fix the error.
+**Explanation:** The ID was passed as a string, but the "rememberCaught()" function requires a number. So putting "rawID" in "Number()" converts the string to a number to fix the error.
 
 ## 2. Look up, number line
 
 **Message:** Property 'padStart' does not exist on type 'number'.
 
-**Explanation:** "pokemon.id" is a number, but the "padStart" method only works on strings. So putting "pokemon.id" in "formatNumber()", a function that converts it to a string to fix the error.
+**Explanation:** "pokemon.id" is a number, but the "padStart" method only works on strings. So putting "pokemon.id" in "formatNumber()", a function that converts it to a string, fixes the error.
 
 ## 3. Sort menu
 
@@ -42,13 +42,13 @@ Example (not one of the ten):
 
 **Message:** Property 'primaryType' is missing in type '{ id: number; name: string; }' but required in type 'PokemonSummary'.
 
-**Explanation:** The object being returned did not have 'primaryType' property. So I added 'primaryType' by getting the first type from the Pokemon's data array.
+**Explanation:** The object being returned did not have a 'primaryType' property. So I added 'primaryType' by getting the first type from the Pokemon's data array.
 
 ## 7. Nickname line
 
 **Message:** Type 'string | undefined' is not assignable to type 'string'.
 
-**Explanation:** The nickname could be undefined. With the label guaranteeing a string. I added the "??" operator to use the species name if there is no nickname.
+**Explanation:** The nickname could be undefined. With the label guaranteeing a string, I added the "??" operator to use the species name if there is no nickname.
 
 ## 8. Card-count badge
 
@@ -66,7 +66,7 @@ Example (not one of the ten):
 
 **Message:** Argument of type 'Promise<PokemonMeasurement>' is not assignable to parameter of type 'PokemonMeasurement'.
 
-**Explanation:** The "loadMeasurement" function returns a Promise since it fetches data async, but the code wasn't waiting for it to resolve. I added "await" to make sure the Promise is ready before assigning it to the variable.
+**Explanation:** The "loadMeasurement" function returns a "Promise" since it fetches data async, but the code wasn't waiting for it to resolve. I added "await" to make sure the "Promise" is ready before assigning it to the variable.
 
 ## Typecheck result
 
